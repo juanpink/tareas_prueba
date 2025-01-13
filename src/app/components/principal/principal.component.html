@@ -1,16 +1,18 @@
 <h3>Módulo Principal</h3>
 
 <main>
-    <label for="nombre_tarea">Nombre Tarea</label>
-    <input type="text" id="nombre_tarea" name="nombre_tarea">
+    <form>
+        <label for="nombre_tarea">Nombre Tarea</label>
+        <input type="text" id="nombre_tarea" name="nombre_tarea">
 
-    <label for="criticidad">Criticidad de la tarea</label>
-    <select name="criticidad" id="criticidad">
-        <option value="baja">Baja</option>
-        <option value="media">Media</option>
-        <option value="alta">Alta</option>
-    </select>
-    <button id="guardar">Guardar</button>
+        <label for="criticidad">Criticidad de la tarea</label>
+        <select name="criticidad" id="criticidad">
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">Alta</option>
+        </select>
+        <button id="guardar">Guardar</button>
+    </form>
 
     <app-tareas></app-tareas>
 </main>
