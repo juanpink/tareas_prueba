@@ -1,18 +1,29 @@
 <h3>Módulo Principal</h3>
 
 <main>
-    <form>
-        <label for="nombre_tarea">Nombre Tarea</label>
-        <input type="text" id="nombre_tarea" name="nombre_tarea">
+    <div id="formulario">
+        <div>
+            <label for="nombre_tarea">Nombre Tarea</label>
+            <input type="text" id="nombre_tarea" name="nombre_tarea" placeholder="Tarea" [(ngModel)]="nombreTarea">
+        </div>
 
-        <label for="criticidad">Criticidad de la tarea</label>
-        <select name="criticidad" id="criticidad">
-            <option value="baja">Baja</option>
-            <option value="media">Media</option>
-            <option value="alta">Alta</option>
-        </select>
-        <button id="guardar">Guardar</button>
-    </form>
+        <div>
+            <label for="criticidad">Criticidad de la tarea</label>
+            <select name="criticidad" id="criticidad" [(ngModel)]="criticidad">
+                <option value="Baja" selected>Baja</option>
+                <option value="Media">Media</option>
+                <option value="Alta">Alta</option>
+            </select>
+        </div>
 
-    <app-tareas></app-tareas>
+        <div>
+            <button (click)="crear()">Crear</button>
+        </div>
+    </div>
+
+    <div id="listado_tareas">
+        <app-tareas *ngFor="let tarea of tareas" [tarea]=tarea></app-tareas>
+    </div>
+
+    <!--<app-creditos nombre="Juanma" anyo="2025"></app-creditos>-->
 </main>
